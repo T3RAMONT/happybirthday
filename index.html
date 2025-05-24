@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Поздравление папе</title>
+  <style>
+    body {
+      background-color: #fef6e4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      padding: 50px;
+      color: #333;
+    }
+    h1 {
+      font-size: 3em;
+      color: #ff6f61;
+    }
+    p {
+      font-size: 1.5em;
+    }
+    .heart {
+      color: red;
+      font-size: 2em;
+    }
+    .card {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      padding: 30px;
+      display: inline-block;
+      margin-top: 30px;
+    }
+    .question {
+      margin-top: 40px;
+    }
+    .buttons {
+      margin: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: #ffb703;
+      color: white;
+    }
+    button:hover {
+      background-color: #fb8500;
+    }
+    .response {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>С Днём Рождения, папа!</h1>
+  <div class="card">
+    <p>Дорогой папа! 💙</p>
+    <p>Ты — наш герой! Желаем тебе счастья, здоровья и вдохновения каждый день.</p>
+    <p class="heart">С любовью, твой сын ❤️</p>
+  </div>
+
+  <div class="question">
+    <p>Тебе нравится это поздравление?</p>
+    <div class="buttons">
+      <button onclick="showResponse('answer1', 'Я знал, что тебе понравится! 😊')">Да</button>
+      <button onclick="showResponse('answer1', 'Ну ничего, в следующий раз постараюсь лучше! 😅')">Нет</button>
+    </div>
+    <div id="answer1" class="response"></div>
+  </div>
+
+  <div class="question">
+    <p>Ты счастлив быть моим папой?</p>
+    <div class="buttons">
+      <button onclick="showResponse('answer2', 'Я тебя тоже очень люблю! ❤️')">Да</button>
+      <button onclick="showResponse('answer2', 'Ой, ну не грусти, я всё равно тебя люблю! 😄')">Нет</button>
+    </div>
+    <div id="answer2" class="response"></div>
+  </div>
+
+  <script>
+    function showResponse(id, message) {
+      document.getElementById(id).textContent = message;
+    }
+  </script>
+</body>
+</html>
